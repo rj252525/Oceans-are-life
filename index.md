@@ -1,4 +1,5 @@
 ---
-title: About
----
-Its about protecting the environment
+title: My Website
+theme: cayman
+layout: default
+--- 
