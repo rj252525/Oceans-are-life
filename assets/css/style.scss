@@ -2,7 +2,13 @@
 ---
 
 @import "{{ site.theme }}";
+
 .image-container {
-   max-width: 100%;
-   height: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.feature-card img {
+  max-width: 100%;
+  height: auto;
 }
