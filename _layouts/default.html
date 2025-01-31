@@ -1,141 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <style>
-    :root {
-      --primary-color: #136b93;
-      --secondary-color: #1e3c72;
-      --light-bg: #f8fafc;
-      --font-family: 'Poppins', sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }}</title>
+<style>
+:root {
+--primary-color: #136b93;
+--secondary-color: #1e3c72;
+--light-bg: #f8fafc;
+--font-family: 'Poppins', sans-serif;
+}
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+line-height: 1.6;
+color: #636e72;
+font-family: var(--font-family);
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 2rem;
+background-color: white;
+}
 
-    body {
-      line-height: 1.6;
-      color: #636e72;
-      font-family: var(--font-family);
-    }
+header {
+background-color: var(--light-bg);
+padding: 2rem 0;
+text-align: center;
+}
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 2rem;
-      background-color: white;
-    }
+nav {
+display: flex;
+justify-content: center;
+gap: 2rem;
+margin-bottom: 1.5rem;
+list-style: none;
+}
 
-    header {
-      background-color: var(--light-bg);
-      padding: 2rem 0;
-      text-align: center;
-    }
+nav a {
+color: var(--primary-color);
+text-decoration: none;
+font-weight: 500;
+transition: color 0.3s ease;
+}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      margin-bottom: 1.5rem;
-      list-style: none;
-    }
+nav a:hover {
+color: var(--secondary-color);
+}
 
-    nav a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
+.project-name {
+font-size: 2rem;
+margin-bottom: 1rem;
+}
 
-    nav a:hover {
-      color: var(--secondary-color);
-    }
+.content {
+max-width: 800px;
+margin: 0 auto;
+background-color: white;
+padding: 2rem;
+border-radius: 0.5rem;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
 
-    .project-name {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+.footer {
+background-color: var(--light-bg);
+padding: 1.5rem 0;
+text-align: left;
+margin-top: 2rem;
+}
 
-    .content {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
+.footer-owner {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 2rem;
+align-items: center;
+}
 
-    footer {
-      background-color: var(--light-bg);
-      padding: 1.5rem 0;
-      text-align: left;
-      margin-top: 2rem;
-    }
+.owner-link {
+color: var(--primary-color);
+text-decoration: none;
+}
 
-    .footer-owner {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      align-items: center;
-    }
+.owner-link:hover {
+text-decoration: underline;
+}
 
-    .owner-link {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
+.project-details {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+gap: 2rem;
+margin-top: 2rem;
+}
 
-    .owner-link:hover {
-      text-decoration: underline;
-    }
+.detail-item {
+color: #636e72;
+padding: 0.5rem 0;
+border-bottom: 1px solid var(--light-bg);
+}
 
-    .project-details {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
+.detail-item:last-child {
+border-bottom: none;
+}
 
-    .detail-item {
-      color: #636e72;
-      padding: 0.5rem 0;
-      border-bottom: 1px solid var(--light-bg);
-    }
+@media (max-width: 768px) {
+nav {
+flex-wrap: wrap;
+justify-content: center;
+}
+}
 
-    .detail-item:last-child {
-      border-bottom: none;
-    }
+/* Animated Card Protection */
+ protected-content {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+}
 
-    @media (max-width: 768px) {
-      nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-  </style>
+protected-content.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.trigger {
+ cursor: pointer;
+ background-color: #f0f0f0;
+ padding: 1rem;
+ border-radius: 0.5rem;
+ transition: background-color 0.2s ease;
+}
+
+.trigger:hover {
+    background-color: #136b93;
+}
+</style>
 </head>
 <body>
-  <div class="container">
+<div class="container">
     <header role="banner">
-      <nav role="navigation" aria-label="Navigation">
-        <ul>
-          
-        </ul>
-      </nav>
-      <h1 class="project-name">{{ page.title | default: site.title | default:  }}</h1>
+        <nav role="navigation" aria-label="Navigation">
+            <ul>
+                <!-- Navigation links would go here -->
+            </ul>
+        </nav>
+        <h1 class="project-name">{{ page.title | default: site.title }}</h1>
     </header>
-
+    
     <main role="main" class="content">
-      {{ content }}
+        {{ content }}
+        
+        <!-- Animated Card Protection -->
+        <div class="protected-content visible">
+            <div class="trigger">Hover me to protect the content</div>
+            <div class="protected-content-inner">
+                <!-- Your protected content goes here -->
+                <p>This is protected content that will show when you hover over the trigger element.</p>
+            </div>
+        </div>
     </main>
 
     <footer role="contentinfo">
-   
+        <!-- Footer content would go here -->
     </footer>
-  </div>
+</div>
 </body>
 </html>
