@@ -1,7 +1,8 @@
 title: Your Site Title
 description: Your site description
-baseurl: ""  # leave empty if using username.github.io
+baseurl: "/Oceans-are-life"  # Add your repository name here
 url: "https://rj252525.github.io"
+
 
 # Build settings
 markdown: kramdownremote_theme: pages-themes/cayman@v0.2.0
