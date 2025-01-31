@@ -1,56 +1,50 @@
-/* Styles for the header */
-.header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem 0;
-  text-align: center;
+/* Base styles */
+:root {
+  --primary-color: #157878;
+  --secondary-color: #136b93;
+  --text-color: #333;
+  --light-bg: #f5f5f5;
+  --font-family: 'Open Sans', sans-serif;
 }
 
-.project-name {
-  font-size: 2.5em;
-  color: #333;
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 1rem;
-  text-decoration: none;
-}
-
-.project-tagline {
-  font-size: 1.2em;
-  color: #666;
-  font-family: 'Open Sans', sans-serif;
-  margin-bottom: 2rem;
-}
-
-/* Button styling */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: #157878;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-family: 'Open Sans', sans-serif;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: #136b93;
-}
-
-/* Main content styling */
-.main-content {
+/* Header styles */
+.header-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: left;
+  text-align: center;
 }
 
-/* Footer styling */
+.top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.top-nav .nav-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Main content styles */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-content {
+  background-color: var(--light-bg);
+}
+
+/* Footer styles */
 .site-footer {
-  background-color: #f5f5f5;
-  padding: 2rem 0;
+  background-color: var(--light-bg);
+  padding: 3rem 0;
   text-align: center;
-  margin-top: 4rem;
 }
 
 .footer-owner, .footer-credits {
@@ -59,10 +53,11 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+  padding: 0 1.5rem;
 }
 
 .owner-link {
-  color: #333;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -70,13 +65,35 @@
   text-decoration: underline;
 }
 
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: var(--font-family);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
-  .header-content {
+  .header-wrapper {
     padding: 1rem;
   }
   
-  .project-name {
-    font-size: 2em;
+  .top-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .content-wrapper {
+    padding: 1rem;
   }
 }
