@@ -2,12 +2,11 @@
 ---
 @import "base";
 
-.image-container {
-  max-width: 100%;
+
+.feature-card img {
+  width: 100%;
   height: auto;
 }
-
-.feature-card img,
 .hero-image img {
   width: 100%;
   height: auto;
