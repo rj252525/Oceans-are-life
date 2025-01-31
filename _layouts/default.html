@@ -1,21 +1,43 @@
----
-title: My Jekyll Website
----
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jekyll/3.6.1/static/docs.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jekyll/3.6.1/javascript.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>My Jekyll Website</h1>
-        
-        <!-- Create multiple pages by adding new YAML files in the `_pages` folder -->
-        <!-- For example, `about.md` would create a page at `/about/` -->
-        
-        <!-- Add content to your site below -->
+    <!-- YAML Front Matter for Jekyll -->
+    <div class="header">
+        <h1>My Website</h1>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Section 1: About Me -->
+        <section class="page-section" id="about">
+            <h2>About Me</h2>
+            <div class="page-content">
+                {{ content: about.md }}
+            </div>
+        </section>
+
+        <!-- Section 2: My Projects -->
+        <section class="page-section" id="projects">
+            <h2>My Projects</h2>
+            <div class="page-content">
+                {{ content: projects.md }}
+            </div>
+        </section>
+
+        <!-- Section 3: Contact Me -->
+        <section class="page-section" id="contact">
+            <h2>Contact Me</h2>
+            <div class="page-content">
+                {{ content: contact.md }}
+            </div>
+        </section>
     </div>
 </body>
 </html>
