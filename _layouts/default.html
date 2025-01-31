@@ -3,205 +3,196 @@
 <head
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ page.title | default: site.title }}</title>
+<title>Modern Web Design</title>
 <style>
 :root {
---primary-color: #136b93;
---secondary-color: #1e3c72;
---accent-color: #9333ea;
---light-bg: #f8fafc;
---font-family: 'Poppins', sans-serif;
+  --primary-color: #136b93;
+  --secondary-color: #1e3c72;
+  --accent-color: #9333ea;
+  --light-bg: #f8fafc;
+  --font-family: 'Poppins', sans-serif;
 }
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-line-height: 1.6;
-color: #636e72;
-font-family: var(--font-family);
-transition: color 0.3s ease;
+  line-height: 1.6;
+  color: #636e72;
+  font-family: var(--font-family);
+  transition: all 0.3s ease;
 }
 
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 2rem;
-background-color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: white;
 }
 
 header {
-background-color: rgba(255, 255, 255, 0.95);
-padding: 4rem 0;
-text-align: center;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 4rem 0;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .nav-wrapper {
-position: sticky;
-top: 0;
-background-color: rgba(255, 255, 255, 0.95);
-z-index: 1000;
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  z-index: 1000;
 }
 
 nav {
-display: flex;
-justify-content: center;
-gap: 2rem;
-margin-bottom: 1.5rem;
-list-style: none;
-flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  list-style: none;
+  flex-wrap: wrap;
 }
 
 nav a {
-color: var(--primary-color);
-text-decoration: none;
-font-weight: 500;
-transition: all 0.3s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 nav a.active {
-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .project-name {
-font-size: 2.5rem;
-margin-bottom: 1.5rem;
-text-align: center;
-animation: fadeInUp 1s ease forwards;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
 }
 
 .content {
-max-width: 800px;
-margin: 0 auto;
-padding: 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
 }
 
 /* Card Design */
 .card {
-background-color: white;
-border-radius: 15px;
-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-padding: 1.5rem;
-transition: transform 0.3s ease;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
 }
 
 .card:hover {
-transform: translateY(-10px);
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Button Styles */
 .btn {
-display: inline-block;
-padded: 0.8rem 1.5rem;
-background-color: var(--accent-color);
-color: white;
-border-radius: 25px;
-text-decoration: none;
-transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--accent-color);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .btn:hover {
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 
 /* Modern Text Effects */
 .hero-section h1 {
-position: relative;
-background: linear-gradient(to right, #636e72, #136b93);
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-font-size: 3.5rem;
-margin-bottom: 2rem;
-animation: slideUp 1s ease forwards;
-}
-
-@keyframes fadeInUp {
-from { opacity: 0; transform: translateY(20px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUp {
-from { transform: translateY(-100px); }
-to { transform: translateY(0); }
+  position: relative;
+  background: linear-gradient(to right, #636e72, #136b93);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  animation: slideUp 1s ease forwards;
 }
 
 /* Social Media Icons */
 .social-links {
-display: flex;
-gap: 1.5rem;
-max-width: 200px;
-margin-top: 2rem;
-flex-wrap: wrap;
+  display: flex;
+  gap: 1.5rem;
+  max-width: 200px;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
 .social-link {
-color: var(--primary-color);
-font-size: 1.5rem;
-transition: color 0.3s ease;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .social-link:hover {
-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-nav {
-flex-wrap: wrap;
-justify-content: center;
-gap: 1rem;
-}
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 
-.project-name {
-font-size: 2rem;
-}
+  .project-name {
+    font-size: 2rem;
+  }
 
-.hero-section h1 {
-font-size: 2.5rem;
-}
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
 
-.card {
-padding: 1rem;
-}
+  .card {
+    padding: 1rem;
+  }
 
-.btn {
-padding: 0.7rem 1.2rem;
-}
+  .btn {
+    padding: 0.7rem 1.2rem;
+  }
 }
 
 @media (max-width: 480px) {
-.nav-wrapper {
-display: flex;
-flex-wrap: wrap;
-gap: 0.5rem;
-justify-content: center;
+  .nav-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
+  nav a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project-name {
+    text-align: center;
+  }
 }
 
-nav a {
-display: inline-block;
-width: 100%;
-text-align: center;
-}
-
-.project-name {
-text-align: center;
-}
-}
-</style>
-</head>
-<body>
-<div class="container">
-    <header role="banner">
-        <nav role="navigation" aria-label="Navigation">
+/* Accessibility */
+ aria-label="Navigation">
             <ul>
                 <li><a href="#" class="active">Home</a></li>
                 <li><a href="#">About</a></li>
