@@ -1,10 +1,9 @@
 ---
-title: About Me
 layout: default
+title: About
+permalink: /about/
 ---
 
-# About Me
+# About
 
-Hi! I'm [Your Name]. This is my personal website built using the Cayman theme and GitHub Pages.
-
-I like to write about technology, design, and other interesting topics. Feel free to explore this website and let me know what you think!
+This is the about page content. You can edit this content in about.md file.
