@@ -1,9 +1,9 @@
 ---
 layout: default
 title: About
-permalink: /about/
+permalink: /Oceans-are-life/about/
 ---
 
 # About
 
-This is the about page content. You can edit this content in about.md file.
+This is the about page content.
